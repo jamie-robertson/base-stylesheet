@@ -1,0 +1,274 @@
+@import 'reset';
+@import 'variables';
+@import 'fonts';
+
+$font-base-size: 16px;
+$font-base: arial;
+$font-base-color: #ececec;
+
+$font-mono: times;
+
+$color-link: red;
+$color-link-hover:darken($color-link, 10%);
+
+$color-white: #ffffff;
+$color-gray-primary: gray;
+$color-gray-secondary: darken($color-gray-primary, 10%);
+
+
+* {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: $font-base;
+	color: $font-base-color;
+}
+
+h1, h2, h3 {
+	font-family: $font-base;
+	letter-spacing: 1px;
+	font-weight: normal;
+}
+
+pre,
+code,
+samp,
+kbd {
+	font-family: $font-mono;
+	background-color: $color-gray-primary;
+	border: 1px solid $color-gray-secondary;
+	border-radius: 2px;
+	font-size: $font-base-size;
+}
+
+code,
+samp,
+kbd {
+	padding: 0 4px;
+}
+
+pre { 
+	padding: 8px;
+
+	code,
+	samp,
+	kbd{
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		padding: 0;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 13px 0 21px;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 3.4rem;
+}
+
+h2 {
+	font-size: 2.8rem;
+}
+
+h3 {
+	font-size: 2.4rem;
+}
+
+h4 {
+	font-size: 2.0rem;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 2.0rem;
+	font-weight: normal;
+}
+
+h6 {
+	font-size: 2.0rem;
+	font-style: italic;
+}
+
+a:link {
+	color: $color-link;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: $color-link-hover;
+}
+
+a:hover,
+a:focus {
+	color: $color-link-hover;
+}
+
+a:active {
+	color: $color-link-hover;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+hr,
+pre,
+blockquote {
+	margin-bottom: 13px;
+}
+
+p,
+img,
+ul,
+ol,
+dl,
+dd,
+figure,
+figcaption {
+	padding-bottom: 13px;
+}
+
+hr {
+	border-top: 1px solid $color-gray-primary;
+	border-bottom: 1px solid $color-gray-secondary;
+	border-left: none;
+	border-right: none;
+}
+
+blockquote {
+	margin-left: 13px;
+	border-left: 3px solid $color-gray-primary;
+	padding: 8px 13px;
+
+	p:last-child{
+		padding-bottom: 0;
+	}
+}
+
+ol,
+ul {
+	margin-left: 21px;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+dt {
+	font-style: italic;
+}
+dd {
+	text-indent: 21px;
+}
+
+figure {
+	display: table;
+	margin: 0 auto;
+	padding-left: 13px;
+	padding-right: 13px;
+
+	img {
+		display: table;
+		margin: 0 auto;
+	}
+}
+
+figcaption,
+small,
+sub,
+sup {
+	font-size: $font-base-size;
+}
+
+caption,
+figcaption {
+	text-align: center;
+	font-style: italic;
+}
+
+em,
+cite,
+i 
+	font-style: italic;
+}
+
+strong,
+var,
+b {
+	font-weight: bold;
+}
+
+q {
+	&:before{
+		content: "'";
+	}
+
+	&:after {
+		content: "'";
+	}
+
+	& > q {
+		font-style: italic;
+	}
+}
+
+dfn,
+abbr {
+	border-bottom: 1px dotted $color-gray-secondary;
+	cursor: default;
+}
+
+sub {
+	vertical-align: sub;
+}
+sup {
+	vertical-align: super;
+}
+
+table {
+	margin: 0 auto;
+
+	caption {
+		margin-bottom: 5px;
+	}
+
+	thead {
+		background-color: $color-gray-primary;
+		color: $color-white;
+	}
+
+	tbody {
+		background-color: $color-gray-secondary;
+
+		tr:nth-child(2n) {
+			background-color: $color-gray-secondary;
+		}
+	}
+
+	th, td {
+		padding: 5px 8px;
+	}
+ 
+	tfoot{
+		background-color: $color-gray-secondary;
+
+		td { 
+			text-align: center;
+		}
+	}
+}
